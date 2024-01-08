@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--G Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!--Fim G Fonts-->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Portfolio GH</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="style.css" rel="stylesheet" />
+  
+  <script src="index.js" defer></script>
+</head>
+
+<body id="pt-br">
+  <header>
+    <div class="interface">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="logo x"/>
+        </a>
+      </div>
+      <nav class="menu-desktop">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#portfolio">Projetos</a></li>
+          <li class="nav-item">
+            <input type="checkbox" id="dark-change" onclick="toggleDarkMode()">
+            <label for="dark-change">
+                <i class='nav-link bi bi-sun'></i>
+                <i class='nav-link bi bi-moon'></i>   
+            </label>
+          </li>
+        </ul>
+      </nav>
+      <div class="btn-contato">
+        <a href="#form">
+          <button>Contato</button>
+        </a>
+      </div>
+
+      <div class="btn-abrir-menu" id="btn-menu">
+        <i class="bi bi-list"></i>
+      </div>
+      <div class="menu-mobile" id="menu">
+        <div class="btn-fechar">
+            <i class="bi bi-x-lg"></i>
+        </div>
+        <nav>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#especialidades">Especialidades</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#portfolio">Projetos</a></li>
+              <li><a href="#form">Contato</a></li>
+              <li class="nav-item">
+                <input type="checkbox" id="dark-change" onclick="toggleDarkMode()">
+                <label for="dark-change">
+                    <i class='nav-link bi bi-sun'></i>
+                    <i class='nav-link bi bi-moon'></i>   
+                </label>
+              </li>
+            </ul>
+          </nav>
+      </div>
+      <div class="overlay-menu" id="overlay">
+
+      </div>
+    </div>
+    
+  </header>
+
+  <main>
+    <section class="topo-do-site" id="inicio">
+      <div class="interface">
+          <div class="flex">
+            <div class="txt-topo-site">                  
+              <h1>O DESENVOLVIMENTO DE SISTEMAS PARA AJUDA E AUXÍLIO GERAL <span>.</span></h1>
+              <p>Do que seria o programador se o mesmo não pudesse abstrair, utilizar a criatividade e inovação com o desejo
+                de ajudar um aos outros?
+                <br>
+                Um programador, para mim, é como um arquiteto digital. Ele não apenas escreve linhas de código, mas constrói mundos virtuais a partir do nada. É alguém que vê padrões onde outros veem caos, que transforma problemas complexos em desafios estimulantes.
+                A magia está na capacidade de abstrair - é como ser capaz de ver o código como um idioma próprio e entender sua dança. A criatividade é a faísca que torna cada linha única, é o toque pessoal que transforma o código em algo mais do que uma simples sequência de instruções. E a inovação é o ímpeto constante de melhorar, de buscar novas maneiras de fazer as coisas, de criar algo revolucionário a partir do convencional.
+                <br>
+                Mas o que realmente impulsiona muitos programadores, incluindo a mim, é a ideia de fazer a diferença. É saber que cada linha de código pode melhorar a vida de alguém, simplificar tarefas, conectar pessoas ou resolver problemas complexos. É a busca incessante por ajudar, por contribuir para um mundo onde a tecnologia não é apenas uma ferramenta, mas uma força para o bem.
+                <br>
+                Assim, ser um programador não é apenas sobre habilidades técnicas, mas sobre um misto de paixão, criatividade e o desejo de causar um impacto positivo no mundo.
+              </p>
+              <div class="btn-contato">
+                <a href="#form">
+                  <button>Entre em Contato</button>
+                </a>
+              </div>
+            </div>
+            <a href="https://br.freepik.com/vetores-gratis/desenvolvimento-de-novos-aplicativos-para-desktop_10276612.htm#query=programing&position=2&from_view=search&track=sph&uuid=c2a032a3-bf09-49e0-ab95-88e10f36eaa0" target="_blank">
+            <div class="img-topo-site">              
+                <img src="images/topo.png" alt=""/>
+            </div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <section class="especialidades" id="especialidades">
+        <div class="interface">
+            <h2 class="titulo">MINHAS <span>ESPECIALIDADES </span></h2>
+            <div class="flex">
+                <div class="especialidades-box">
+                    <i class="bi bi-database"></i>
+                    <h3>Desenvolvimento BackEnd e de banco</h3>
+                    <p>Conhecimento de conexão de banco de dados NoSQL (Firebase) e SQL (MySQL, MariaDb, Postgresql) e em linguagens como PHP (com Laravel), Java (JavaFX, Swing e Conexão SQL), C# e Python, todos com 
+                      uma compreensão altamente embassada da lógica de programação
+                    </p>
+                </div>
+                <div class="especialidades-box">
+                  <i class="bi bi-code-square"></i>
+                  <h3>Desenvolvimento Web <br> e Client-Side</h3>
+                  <p>Conhecimento intermediário <br> 
+                    em HTML/CSS/JS e frameworks/bibliotecas<br>
+                    (Bootstrap,Materialize,React,Next[...])</p>
+              </div>
+                <div class="especialidades-box">
+                    <i class="bi bi-pen"></i>
+                    <h3>Edição</h3>
+                    <p>Noção razoável de edições de imagens, cortes, remoção de background e derivados via Gimp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sobre" id="sobre">
+        <div class="interface">
+            <div class="flex">
+                <div class="img-sobre">
+                    <img src="images/Gustavo.jpg" alt="">
+                </div>
+                <div class="txt-sobre">
+                    <h2>MUITO PRAZER <span>SOU GUSTAVO PEREIRA</span></h2>
+                    <p>Olá! Meu nome é Gustavo e sou um entusiasta do Desenvolvimento de Sistemas há cerca de 2 anos e tenho uma paixão por criar soluções tecnológicas que impactam positivamente as pessoas.
+                       <br>
+                       Como alguém que já estuda nessa área por um tempo razoável, tenho conhecimentos e experiências diversas, com interesse especialmente no Desenvolvimento de sites Web pelo HTML, JS e um pouco do CSS e na linguagem de servidor PHP.
+                       <br>
+                       Acredito firmemente que ser um programador vai além das habilidades técnicas; é sobre paixão, criatividade e o desejo de causar um impacto positivo. Estou constantemente em busca de desafios que me permitam contribuir para um mundo onde a tecnologia seja uma força para o bem.
+                      <br>
+                      Dessa forma, estou bem entusiasmado com as oportunidades de colaborar e criar soluções inovadoras que possam fazer a diferença para todos.  
+                    </p>
+                      
+                    <div class="btn-social">
+                      <a href="https://github.com/Gustavo-Henrique-da-Silva"> <button> <i class="bi bi-github"></i></button></a>
+                      <a href="https://www.linkedin.com/in/gustavo-henrique-834313260"> <button> <i class="bi bi-linkedin"></i></button></a>
+                      <a href="https://linktr.ee/gustavohenriquepereira"> <button> <i class="bi bi-link-45deg"></i></button></a>
+                      <a href="https://www.hackerrank.com/profile/gustavopereira81"> <button> <i class="bi bi-award"></i></button></a>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="interface">
+            <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+            <div class="flex">
+                <!--1920 x 6137-->
+                <div class="img-port" style="background-image: url(images/img1.jpg)">
+                   <a href="https://gustavo-henrique-da-silva.github.io/FeiraTecnologicaCPS/"> <div class="overlay" >  Metaverso </div> </a>
+                </div>
+                <div class="img-port" style="background-image: url(images/img2.jpg)">
+                  <a href="https://github.com/Gustavo-Henrique-da-Silva/SCGA"> <div class="overlay" >  SCGA </div> </a>
+               </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="formulario" id="form">
+        <div class="interface">
+                <h2 class="titulo">FALA <span>COMIGO</span></h1>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc2nzxbTZSPY1kd6aEmlgAMjZFJLViLXFWs4B2ULzencGSB2A/formResponse">
+                    
+                    <input type="email" class="inputs" id="" placeholder="Seu email" name="emailAddress" required>
+                    <input type="text" class="inputs" id="" placeholder="Seu nome completo" name="entry.1959668680" required>
+                    <input type="tel" class="inputs" id="" placeholder="Seu celular" name="entry.808120212">
+                    <textarea type="text" class="inputs" id="" placeholder="Sua mensagem" name="entry.716814058" required></textarea>
+                    <div class="btn-enviar"> <input type="submit" value="ENVIAR"></button> </div>
+                    
+                </form>
+        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="interface">
+        <div class="line-footer">
+           <div class="flex">
+                <div class="logo-footer">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="btn-social">
+                    <a href="https://github.com/Gustavo-Henrique-da-Silva"> <button> <i class="bi bi-github"></i></button></a>
+                    <a href="https://www.linkedin.com/in/gustavo-henrique-834313260"> <button> <i class="bi bi-linkedin"></i></button></a>
+                    <a href="https://linktr.ee/gustavohenriquepereira"> <button> <i class="bi bi-link-45deg"></i></button></a>
+                    <a href="https://www.hackerrank.com/profile/gustavopereira81"> <button> <i class="bi bi-award"></i></button></a>
+                </div>
+           </div>
+        </div>
+
+        
+        <div class="line-footer borda">
+            <p><i class="bi bi-envelope-fill"></i><a href="mailto:gustavopereira8919@gmail.com">gustavopereira8919@gmail.com </a></p>
+        </div>
+    </div>
+  </footer>
+</body>
+
+</html>
