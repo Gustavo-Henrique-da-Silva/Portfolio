@@ -1,8 +1,8 @@
 
 /*Geral*/
 :root{
-  --verde1: #00d5ff;
-  --verde2: #4ec3e0;
+  --azul1: #00d5ff;
+  --azul2: #4ec3e0;
   --preto_escuro: #000;
   --preto1: #000000a7;
   --preto2: #242424;
@@ -33,7 +33,7 @@
     margin: 0 auto;
   }
   
-  .flex{
+  .flex, header > .interface, .overlay, form{
     display: flex;
   }
 
@@ -43,11 +43,11 @@
     text-align: center;
   }
   h2.titulo span{
-    color: var(--verde1);
+    color: var(--azul1);
   }
 
   button:hover, form .btn-enviar input:hover{
-    box-shadow: 0px 0px 30px var(--verde2);
+    box-shadow: 0px 0px 30px var(--azul2);
     transform: scale(1.15);
   }
 
@@ -56,11 +56,23 @@
     cursor: pointer;
   }
   header .interface .logo img:hover, .line-footer .logo-footer img:hover{
-    box-shadow: 0px 0px 100px var(--verde1), inset 0px 105px 1px var(--verde1);
+    box-shadow: 0px 0px 100px var(--azul1), inset 0px 105px 1px var(--azul1);
   }
 
   select{
     width: 100px;
+    background-color: var(--preto1);
+    border: 2px solid var(--branco);
+    padding: 10px;
+    font-size: 16px;
+    color: var(--branco);
+    border-radius: 5px;
+    transition: .5s;
+    margin: 1px 7%;
+    cursor: pointer;
+  }
+  select:hover{
+    box-shadow: 0px 0px 30px var(--azul2);
   }
 
   .btn-social button{
@@ -68,7 +80,7 @@
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: var(--verde1);
+    background-color: var(--azul1);
     font-size: 22px;
     cursor: pointer;
     margin: 0px 0.2vw;
@@ -80,6 +92,7 @@
     font-size: 20px;
     line-height: 30px;
   }
+
   /*Cabeçalho*/
   
   header{
@@ -87,7 +100,6 @@
   }
   
   header > .interface{
-    display: flex;
     align-items: center;
     justify-content: space-between;
   }
@@ -102,7 +114,7 @@
   header a:hover{
     color: var(--branco);
     transform: scale(1.05);
-    text-shadow: 0px 0px 30px var(--verde1);
+    text-shadow: 0px 0px 30px var(--azul1);
   }
   
   header nav ul{
@@ -117,7 +129,7 @@
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: var(--verde1);
+    background-color: var(--azul1);
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -131,7 +143,7 @@
   /*Menu mobile*/
 
   .btn-abrir-menu i{
-    color: var(--verde1);
+    color: var(--azul1);
     font-size: 40px;
   }
 
@@ -160,7 +172,7 @@
     cursor: pointer;
   }
   .menu-mobile .btn-fechar i{
-    color: var(--verde1);
+    color: var(--azul1);
     font-size: 30px;
   }
 
@@ -177,7 +189,7 @@
   }
 
   .menu-mobile nav ul li a:hover{
-    background-color: var(--verde1);
+    background-color: var(--azul1);
     color: var(--preto_escuro);
   }
 
@@ -210,7 +222,7 @@
   }
 
   .topo-do-site h1 span{
-    color: var(--verde1);
+    color: var(--azul1);
   }
 
   .topo-do-site .txt-topo-site p{
@@ -258,7 +270,7 @@ section.especialidades .flex{
 
 .especialidades .especialidades-box i{
     font-size: 70px;
-    color: var(--verde1);
+    color: var(--azul1);
 }
 
 .especialidades .especialidades-box i{
@@ -280,6 +292,7 @@ section.sobre .flex{
   width: 20em;
   border-radius: 30px;
 }
+
 .sobre .txt-sobre{
     color: var(--branco);
 
@@ -292,7 +305,7 @@ section.sobre .flex{
 }
 
 .sobre .txt-sobre h2 span{
-    color: var(--verde1);
+    color: var(--azul1);
     display: block;
 }
 
@@ -338,7 +351,6 @@ section.portfolio .flex{
     height: 100%;
     background-color: var(--overlay);
     border-radius: 40px;
-    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
@@ -361,7 +373,6 @@ section.formulario{
 form{
     max-width: 500px;
     margin: 0 auto;
-    display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
@@ -385,7 +396,7 @@ form input:hover, form textarea:hover{
 }
 
 form input:focus, form textarea:focus{
-  border: 1px solid var(--verde2)
+  border: 1px solid var(--azul2)
 }
 form input::placeholder, form textarea::placeholder{
     color: var(--branco);
@@ -403,7 +414,7 @@ form .btn-enviar{
 
 form .btn-enviar input{
     width: 120px;
-    background-color: var(--verde1);
+    background-color: var(--azul1);
     color: var(--preto_escuro);
     font-weight: 700;
     cursor: pointer;
@@ -426,11 +437,11 @@ footer .line-footer{
 }
 
 .borda{
-    border-top: 2px solid var(--verde1);
+    border-top: 2px solid var(--azul1);
 }
 
 footer .line-footer p i{
-    color: var(--verde1);
+    color: var(--azul1);
     font-size: 22px;
 }
 
@@ -526,20 +537,21 @@ footer .line-footer p a{
     }
 
     .light-mode .nav-item .bi-moon{
-      margin-right: 65px;
+      margin-right: 9vh;
+      margin-bottom: 10px;
     }
 
     .nav-item .bi-sun{
       position: relative !important;
-      margin-right: 75px;
+      margin-right: 9vw;
     }
 }
 
 
 
 :root .light-mode{
-  --verde1: rgb(79, 216, 171);
-  --verde2: #7fffd4;
+  --azul1: rgb(79, 216, 171);
+  --azul2: #7fffd4;
   --preto_escuro: #fff;
   --preto1: #ffffffe2;
   --preto2:#ffffffaf;

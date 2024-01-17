@@ -1,7 +1,7 @@
 function getLanguage(){
     const languages = {
         "pt-br":{
-            "lg-ptbr": "Português-br",
+            "lg-ptbr": "pt-br",
             "lg-eng": "Inglês",
             "lg-spn": "Espanhol",
             "item-desktop1": "Início",
@@ -207,40 +207,15 @@ function getElements(){
 function translate(lg){
     const language = getLanguage()[lg];
     console.log(language);
-    const element = getElements();
+    const element =  getElements();
     
-    element["lg-ptbr"].innerHTML = language["lg-ptbr"];  
-    element["lg-eng"].innerHTML = language["lg-eng"];  
-    element["lg-spn"].innerHTML = language["lg-spn"];  
-    element["item-desktop1"].innerHTML = language["item-desktop1"]  
-    element["item-desktop2"].innerHTML = language["item-desktop2"]  
-    element["item-desktop3"].innerHTML = language["item-desktop3"]  
-    element["item-desktop4"].innerHTML = language["item-desktop4"]  
-    element["button-desktop"].innerHTML = language["button-desktop"]  
-    element["item-mobile1"].innerHTML = language["item-mobile1"]  
-    element["item-mobile2"].innerHTML = language["item-mobile2"]  
-    element["item-mobile3"].innerHTML = language["item-mobile3"]  
-    element["item-mobile4"].innerHTML = language["item-mobile4"]  
-    element["button-mobile"].innerHTML = language["button-mobile"]  
-    element["top-title"].innerHTML = language["top-title"]   
-    element["top-message"].innerHTML = language["top-message"] 
-    element["contact"].innerHTML = language["contact"]             
-    element["title-specialties"].innerHTML = language["title-specialties"]  
-    element["backend-desc"].innerHTML = language["backend-desc"]  
-    element["frontend-title"].innerHTML = language["frontend-title"]  
-    element["frontend-desc"].innerHTML = language["frontend-desc"]  
-    element["edition-title"].innerHTML = language["edition-title"]  
-    element["edition-desc"].innerHTML = language["edition-desc"]  
-    element["title-about"].innerHTML = language["title-about"]  
-    element["message-about"].innerHTML = language["message-about"]  
-    element["title-portfolio"].innerHTML = language["title-portfolio"]  
-    element["metaverse-desc"].innerHTML = language["metaverse-desc"]
-    element["contact-me"].innerHTML = language["contact-me"]  
-    element["form-email"].placeholder = language["form-email"]  
-    element["form-name"].placeholder = language["form-name"]  
-    element["form-cell"].placeholder = language["form-cell"]  
-    element["form-message"].placeholder = language["form-message"]  
-    element["form-submit"].value = language["form-submit"]  
+    for(let el in element){
+        if(element[el]){
+            el.includes("form-submit") ? element[el].value = language[el] :
+            el.includes("form") ? element[el].placeholder = language[el] : element[el].innerHTML = language[el] 
+        }
+    }
+    
 }
 
 

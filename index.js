@@ -1,37 +1,35 @@
-// Obtém o idioma preferido do navegador do usuário
-//const userLanguage = navigator.language || navigator.userLanguage;
-
-// Verifica o idioma preferido e redireciona para a versão correspondente do site
-
-//document.getElementById('en') == undefined
-/*if (userLanguage.startsWith('en')) {
-  window.location.href = '/indexEn.html'; // Redireciona para a versão em inglês
-} else if (userLanguage.startsWith('pt-BR') || userLanguage.startsWith('pt-BR')) {
-  window.location.href = '/index.html'; // Redireciona para a versão em português
-} else {
-  // Se o idioma preferido não for inglês nem português, redireciona para uma página padrão ou mantém a atual
-  // window.location.href = '/default'; // Redireciona para uma página padrão
-  window.location.href = '/index.html';
-}*/
-
 import {translate} from "./language.js";
+
+// Tela Mobile
 let btnMenu = document.getElementById("btn-menu");
 let menu = document.getElementById("menu");
 let overlay = document.getElementById("overlay");
-
+let listasMb = document.getElementsByClassName('click');
+let close = document.querySelector(".bi-x-lg");
+  
 btnMenu.addEventListener("click", () =>{
     menu.classList.add("abrir-menu");
 })
 
-menu.addEventListener("click", () =>{
+close.addEventListener("click", () =>{
     menu.classList.remove("abrir-menu");
 })
+
+// Adiciona o mesmo event listener a todos os elementos
+for (var i = 0; i < listasMb.length; i++) {
+  listasMb[i].addEventListener('click', function() {
+    menu.classList.remove("abrir-menu");
+  });
+}
 
 overlay.addEventListener("click", () =>{
     menu.classList.remove("abrir-menu");
 })
 
-// Seu código JavaScript
+
+
+
+// Transição mais sútil ao clicar no link interno
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -42,22 +40,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (targetElement) {
             window.scrollTo({
                 top: targetElement.offsetTop,
-                behavior: 'smooth' // Adiciona o efeito de rolagem suave
+                behavior: 'smooth' 
             });
         }
     });
 });
 
 
-// darkmode.js
-//const favicon = document.querySelector('link[rel="shortcut icon"]');
-const sun = document.querySelector('.bi-sun');
-const moon = document.querySelector('.bi-moon');
+
+//Mudança de temas + linguagem
+
+//tema
 const favicon = document.querySelector('link[rel="shortcut icon"]');
 const logoNav = document.querySelector("#img_nav");
 const logoFooter = document.querySelector("#img_footer");
-const select = document.querySelector("select")
-// Função para alternar o modo dark
+
+
+//linguagem
+const selectDesktop = document.querySelector("#slcDesk");
+const selectMobile = document.querySelector("#slcMb");
+const select = window.matchMedia('(min-width: 1200px)').matches ? selectDesktop : selectMobile;
+
+
+
 window.toggleDarkMode = function() {
   // Obtém o elemento <body>
   const body = document.querySelector('body');
@@ -115,15 +120,12 @@ function changeMode(isDarkMode){
     
     const imgTop = document.querySelector("#img_topo");
     if(imgTop) imgTop.src = "images/topo1.png";
-
-    //document.querySelector('.menu-desktop a[href="#inicio"]').innerHTML = "Tester <br> xuxu"
   }
 }
 
-
-
+//listener de mudança de linguagem
 select.addEventListener("change", () =>{
   translate(select.value);
   localStorage.setItem('language', select.value);
-
+  menu.classList.remove("abrir-menu");
 })
