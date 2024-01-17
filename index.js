@@ -14,7 +14,7 @@
   window.location.href = '/index.html';
 }*/
 
-
+import {translate} from "./language.js";
 let btnMenu = document.getElementById("btn-menu");
 let menu = document.getElementById("menu");
 let overlay = document.getElementById("overlay");
@@ -53,7 +53,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //const favicon = document.querySelector('link[rel="shortcut icon"]');
 const sun = document.querySelector('.bi-sun');
 const moon = document.querySelector('.bi-moon');
-
+const favicon = document.querySelector('link[rel="shortcut icon"]');
+const logoNav = document.querySelector("#img_nav");
+const logoFooter = document.querySelector("#img_footer");
+const select = document.querySelector("select")
 // Função para alternar o modo dark
 window.toggleDarkMode = function() {
   // Obtém o elemento <body>
@@ -71,24 +74,56 @@ window.toggleDarkMode = function() {
   
 // Verifica o estado do modo dark armazenado e aplica-o ao carregar a página
 document.addEventListener('DOMContentLoaded', function() {
-  const isDarkMode = localStorage.getItem('lightMode') === 'true';
+  //getElements("Teste");
   // Aplica o modo dark ou claro com base no estado armazenado
   changeMode(localStorage.getItem('lightMode') !== 'true');
+
+  
+  if(localStorage.getItem('language')){
+    select.value = localStorage.getItem('language');
+    translate(select.value);
+  }
+ 
+   
 });
   
 // Armazena o estado do modo dark ao fechar a página
 window.addEventListener('beforeunload', function() {
+  
+ 
   const isDarkMode = document.querySelector('body').classList.contains('light-mode');
+
   localStorage.setItem('lightMode', isDarkMode);
+
 });
 
 function changeMode(isDarkMode){
   if (!isDarkMode) {
     document.querySelector('body').classList.add('light-mode');
+    favicon.href="/images/logo2.png"
+    logoNav.src="/images/logo2.png"
+    logoFooter.src="/images/logo2.png"
+    
+    const imgTop = document.querySelector("#img_topo");
+    if(imgTop) imgTop.src = "/images/topo2.png";
     
   } else {
     document.querySelector('body').classList.remove('light-mode');
+    favicon.href="/images/logo1.png"
+    logoNav.src="/images/logo1.png"
+    logoFooter.src="/images/logo1.png"
     
+    const imgTop = document.querySelector("#img_topo");
+    if(imgTop) imgTop.src = "/images/topo1.png";
+
+    //document.querySelector('.menu-desktop a[href="#inicio"]').innerHTML = "Tester <br> xuxu"
   }
 }
 
+
+
+select.addEventListener("change", () =>{
+  translate(select.value);
+  localStorage.setItem('language', select.value);
+
+})

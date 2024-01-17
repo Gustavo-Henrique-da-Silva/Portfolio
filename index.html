@@ -10,20 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <!--Fim G Fonts-->
-  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  
+  <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
   <title>Portfolio GPa</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="style.css" rel="stylesheet" />
   
-  <script src="index.js" defer></script>
+  <script type="module" src="index.js"></script>
 </head>
 
-<body id="pt-br">
+<body>
   <header>
     <div class="interface">
       <div class="logo">
         <a href="index.html">
-          <img src="images/logo.png" alt="logo x"/>
+          <img src="images/logo1.png" id="img_nav" alt="logo GPa"/>
         </a>
       </div>
       <nav class="menu-desktop">
@@ -39,7 +40,15 @@
                 <i class='nav-link bi bi-moon'></i>   
             </label>
           </li>
-        </ul>
+            <li>
+              <select name="cars" id="cars">
+                <option value="pt-br">pt-br</option>
+                <option value="eng">Inglês</option>
+                <option value="spn">Espanhol</option>
+              </select>
+            </li>
+         </ul>
+        
       </nav>
       <div class="btn-contato">
         <a href="#form">
@@ -88,6 +97,7 @@
                 de ajudar um aos outros?
                 <br>
                 Um programador, para mim, é como um arquiteto digital. Ele não apenas escreve linhas de código, mas constrói mundos virtuais a partir do nada. É alguém que vê padrões onde outros veem caos, que transforma problemas complexos em desafios estimulantes.
+                <br>
                 A magia está na capacidade de abstrair - é como ser capaz de ver o código como um idioma próprio e entender sua dança. A criatividade é a faísca que torna cada linha única, é o toque pessoal que transforma o código em algo mais do que uma simples sequência de instruções. E a inovação é o ímpeto constante de melhorar, de buscar novas maneiras de fazer as coisas, de criar algo revolucionário a partir do convencional.
                 <br>
                 Mas o que realmente impulsiona muitos programadores, incluindo a mim, é a ideia de fazer a diferença. É saber que cada linha de código pode melhorar a vida de alguém, simplificar tarefas, conectar pessoas ou resolver problemas complexos. É a busca incessante por ajudar, por contribuir para um mundo onde a tecnologia não é apenas uma ferramenta, mas uma força para o bem.
@@ -102,7 +112,7 @@
             </div>
             <a href="https://br.freepik.com/vetores-gratis/desenvolvimento-de-novos-aplicativos-para-desktop_10276612.htm#query=programing&position=2&from_view=search&track=sph&uuid=c2a032a3-bf09-49e0-ab95-88e10f36eaa0" target="_blank">
             <div class="img-topo-site">              
-                <img src="images/topo.png" alt=""/>
+                <img src="images/topo1.png" id="img_topo" alt="img-topo"/>
             </div>
             </a>
           </div>
@@ -113,21 +123,21 @@
         <div class="interface">
             <h2 class="titulo">MINHAS <span>ESPECIALIDADES </span></h2>
             <div class="flex">
-                <div class="especialidades-box">
+                <div class="especialidades-box" id="backend">
                     <i class="bi bi-database"></i>
                     <h3>Desenvolvimento BackEnd e de banco</h3>
                     <p>Conhecimento de conexão de banco de dados NoSQL (Firebase) e SQL (MySQL, MariaDb, Postgresql) e em linguagens como PHP (com Laravel), Java (JavaFX, Swing e Conexão SQL), C# e Python, todos com 
                       uma compreensão altamente embassada da lógica de programação
                     </p>
                 </div>
-                <div class="especialidades-box">
+                <div class="especialidades-box" id="frontend">
                   <i class="bi bi-code-square"></i>
                   <h3>Desenvolvimento Web <br> e Client-Side</h3>
                   <p>Conhecimento intermediário <br> 
                     em HTML/CSS/JS e frameworks/bibliotecas<br>
                     (Bootstrap,Materialize,React,Next[...])</p>
               </div>
-                <div class="especialidades-box">
+                <div class="especialidades-box" id="edition">
                     <i class="bi bi-pen"></i>
                     <h3>Edição</h3>
                     <p>Noção razoável de edições de imagens, cortes, remoção de background e derivados via Gimp</p>
@@ -139,7 +149,7 @@
         <div class="interface">
             <div class="flex">
                 <div class="img-sobre">
-                    <img src="images/Gustavo.jpg" alt="">
+                    <img src="images/Gustavo.jpg" alt="Gustavo">
                 </div>
                 <div class="txt-sobre">
                     <h2>MUITO PRAZER <span>SOU GUSTAVO PEREIRA</span></h2>
@@ -157,6 +167,7 @@
                       <a href="https://www.linkedin.com/in/gustavo-henrique-834313260"> <button> <i class="bi bi-linkedin"></i></button></a>
                       <a href="https://linktr.ee/gustavohenriquepereira"> <button> <i class="bi bi-link-45deg"></i></button></a>
                       <a href="https://www.hackerrank.com/profile/gustavopereira81"> <button> <i class="bi bi-award"></i></button></a>
+                      <a href="https://dio.me/users/gustavohenrique10002"> <button> <i class="bi bi-star"></i></button></a>
                   </div>
                 </div>
 
@@ -169,10 +180,10 @@
             <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
             <div class="flex">
                 <!--1920 x 6137-->
-                <div class="img-port" style="background-image: url(images/img1.jpg)">
+                <div class="img-port" id="Meta" style="background-image: url(images/img1.jpg)">
                    <a href="https://gustavo-henrique-da-silva.github.io/FeiraTecnologicaCPS/"> <div class="overlay" >  Metaverso </div> </a>
                 </div>
-                <div class="img-port" style="background-image: url(images/img2.jpg)">
+                <div class="img-port" id="SCGA" style="background-image: url(images/img2.jpg)">
                   <a href="https://github.com/Gustavo-Henrique-da-Silva/SCGA"> <div class="overlay" >  SCGA </div> </a>
                </div>
             </div>
@@ -185,8 +196,8 @@
                 <h2 class="titulo">FALA <span>COMIGO</span></h1>
                 <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc2nzxbTZSPY1kd6aEmlgAMjZFJLViLXFWs4B2ULzencGSB2A/formResponse">
                     
-                    <input type="email" class="inputs" id="" placeholder="Seu email" name="emailAddress" required>
-                    <input type="text" class="inputs" id="" placeholder="Seu nome completo" name="entry.1959668680" required>
+                    <input type="email" class="inputs" id="" placeholder="Seu e-mail" name="emailAddress" required>
+                    <input type="text" class="inputs" id="" placeholder="Seu nome" name="entry.1959668680" required>
                     <input type="tel" class="inputs" id="" placeholder="Seu celular" name="entry.808120212">
                     <textarea type="text" class="inputs" id="" placeholder="Sua mensagem" name="entry.716814058" required></textarea>
                     <div class="btn-enviar"> <input type="submit" value="ENVIAR"></button> </div>
@@ -202,13 +213,14 @@
         <div class="line-footer">
            <div class="flex">
                 <div class="logo-footer">
-                    <img src="images/logo.png" alt="">
+                    <img src="images/logo1.png" id="img_footer" alt="logo GPa">
                 </div>
                 <div class="btn-social">
                     <a href="https://github.com/Gustavo-Henrique-da-Silva"> <button> <i class="bi bi-github"></i></button></a>
                     <a href="https://www.linkedin.com/in/gustavo-henrique-834313260"> <button> <i class="bi bi-linkedin"></i></button></a>
                     <a href="https://linktr.ee/gustavohenriquepereira"> <button> <i class="bi bi-link-45deg"></i></button></a>
                     <a href="https://www.hackerrank.com/profile/gustavopereira81"> <button> <i class="bi bi-award"></i></button></a>
+                    <a href="https://dio.me/users/gustavohenrique10002"> <button> <i class="bi bi-star"></i></button></a>
                 </div>
            </div>
         </div>

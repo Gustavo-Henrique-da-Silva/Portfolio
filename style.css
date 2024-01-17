@@ -13,6 +13,7 @@
   --cinza3: #93929236;
   --overlay: #000000b8;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +25,7 @@
   body{
     background-color: var(--preto_escuro);
     height: 100vh;
+    transition: 1s;
   }
   
   .interface{
@@ -54,9 +56,12 @@
     cursor: pointer;
   }
   header .interface .logo img:hover, .line-footer .logo-footer img:hover{
-    box-shadow: 0px 0px 100px var(--verde2);
+    box-shadow: 0px 0px 100px var(--verde1), inset 0px 105px 1px var(--verde1);
   }
 
+  select{
+    width: 100px;
+  }
 
   .btn-social button{
     width: 60px;
@@ -66,9 +71,10 @@
     background-color: var(--verde1);
     font-size: 22px;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0px 0.2vw;
     transition: 1s;
 }
+
 
   p{
     font-size: 20px;
@@ -104,7 +110,7 @@
   }
   header nav.menu-desktop ul li{
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 20px;
   }
   
   .btn-contato button{
@@ -215,6 +221,7 @@
   .topo-do-site .img-topo-site img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
+    transition: 2s;
   }
 
 
@@ -267,6 +274,11 @@ section.sobre{
 section.sobre .flex{
     align-items: center;
     gap: 60px;
+}
+
+.img-sobre img{
+  width: 20em;
+  border-radius: 30px;
 }
 .sobre .txt-sobre{
     color: var(--branco);
@@ -373,7 +385,7 @@ form input:hover, form textarea:hover{
 }
 
 form input:focus, form textarea:focus{
-  border: 1px solid #00d5ff
+  border: 1px solid var(--verde2)
 }
 form input::placeholder, form textarea::placeholder{
     color: var(--branco);
@@ -484,11 +496,6 @@ footer .line-footer p a{
         text-align: center;
     }
 
-    .img-sobre img{
-        width: 105%;
-        border-radius: 10px;
-    }
-
     /*Portfolio*/
     section.portfolio{
         padding: 80px 8%
@@ -531,8 +538,8 @@ footer .line-footer p a{
 
 
 :root .light-mode{
-  --verde1: aquamarine;
-  --verde2: rgb(79, 216, 171);
+  --verde1: rgb(79, 216, 171);
+  --verde2: #7fffd4;
   --preto_escuro: #fff;
   --preto1: #ffffffe2;
   --preto2:#ffffffaf;
@@ -553,6 +560,7 @@ footer .line-footer p a{
 
 i.nav-link.bi {
   font-size: 28px;
+  cursor: pointer;
 }
 
 
