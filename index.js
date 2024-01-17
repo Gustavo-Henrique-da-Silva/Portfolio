@@ -100,21 +100,21 @@ window.addEventListener('beforeunload', function() {
 function changeMode(isDarkMode){
   if (!isDarkMode) {
     document.querySelector('body').classList.add('light-mode');
-    favicon.href="./images/logo2.png"
-    logoNav.src="./images/logo2.png"
-    logoFooter.src="./images/logo2.png"
+    favicon.href="images/logo2.png"
+    logoNav.src="images/logo2.png"
+    logoFooter.src="images/logo2.png"
     
     const imgTop = document.querySelector("#img_topo");
-    if(imgTop) imgTop.src = "./images/topo2.png";
+    if(imgTop) imgTop.src = "images/topo2.png";
     
   } else {
     document.querySelector('body').classList.remove('light-mode');
-    favicon.href="./images/logo1.png"
-    logoNav.src="./images/logo1.png"
-    logoFooter.src="./images/logo1.png"
+    favicon.href="images/logo1.png"
+    logoNav.src="images/logo1.png"
+    logoFooter.src="images/logo1.png"
     
     const imgTop = document.querySelector("#img_topo");
-    if(imgTop) imgTop.src = "./images/topo1.png";
+    if(imgTop) imgTop.src = "images/topo1.png";
 
     //document.querySelector('.menu-desktop a[href="#inicio"]').innerHTML = "Tester <br> xuxu"
   }
