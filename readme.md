@@ -1,3 +1,6 @@
 # Meu Portfolio/My Portifolio
-<h1>Link do site: </h1>
-<a href="https://gustavo-henrique-da-silva.github.io/Portfolio/"> https://gustavo-henrique-da-silva.github.io/Portfolio/</a>
+| :placard: Atributos | Descrição   |
+| -------------  | --- |
+| :sparkles: Nome        | **Portfolio GPa**
+| :label: Tecnologias | html, css, js (tecnologias utilizadas)
+| :rocket: URL         | https://GustavoPereira-Dev.github.io/Portfolio/
