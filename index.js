@@ -1,4 +1,4 @@
-import {translate} from "./language.js";
+//import {translate} from "./language.js";
 
 // Tela Mobile
 let btnMenu = document.getElementById("btn-menu");
@@ -129,3 +129,23 @@ select.addEventListener("change", () =>{
   localStorage.setItem('language', select.value);
   menu.classList.remove("abrir-menu");
 })
+
+/**
+ * // Obtém o caminho completo do arquivo
+const path = window.location.pathname;
+
+// Extrai o nome do arquivo
+const fileName = path.substring(path.lastIndexOf('/') + 1);
+
+// Verifica o nome do arquivo e realiza ações distintas
+if (fileName === 'index.html') {
+    console.log('Ação para index.html');
+    // Coloque aqui a ação específica para index.html
+} else if (fileName === 'nome.html') {
+    console.log('Ação para nome.html');
+    // Coloque aqui a ação específica para nome.html
+} else {
+    console.log('Ação para outros arquivos');
+    // Coloque aqui a ação para outros arquivos
+}
+ */

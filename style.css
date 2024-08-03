@@ -309,6 +309,9 @@ section.sobre .flex{
     display: block;
 }
 
+span{
+  color: var(--azul1);
+}
 .sobre .txt-sobre p{
     margin: 20px 0;
     text-align: justify;
